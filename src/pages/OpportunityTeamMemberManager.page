@@ -1,0 +1,16 @@
+<apex:page standardController="Opportunity" extensions="OpportunityTeamMemberController">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockSection columns="3">
+<apex:outputLink value="{!'/'+opportunity.id}">{!Opportunity.Name}</apex:outputLink>
+<apex:selectList value="{!accessLevelSelected}" size="1">
+    <apex:selectOption itemLabel="Read Only" itemValue="Read Only"> </apex:selectOption>
+    <apex:selectOption itemLabel="Read/Write" itemValue="Read/Write"> </apex:selectOption>
+</apex:selectList>
+<apex:inputField value="{!opptyTeamMember.UserId}" />
+<apex:outputField value="{!opptyTeamMember.OpportunityId }" />
+</apex:pageBlockSection>
+<apex:commandButton value="Save" action="{!insertOTM}"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

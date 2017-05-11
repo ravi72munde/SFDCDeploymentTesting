@@ -1,0 +1,14 @@
+<apex:page controller="weatherServiceController" showHeader="false" sidebar="false">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton value="Get Date " action="{!getService}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection >
+<apex:inputText value="{!city}" label="City"/>
+<apex:inputText value="{!country}" label="Country"/>
+<apex:outputText value="{!message}"></apex:outputText>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

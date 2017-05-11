@@ -1,0 +1,7 @@
+<apex:page controller="authTestController"  >
+     <apex:form >
+         <apex:commandButton value="Connect" action="{!connect}"/>
+         <apex:commandButton value="get Token" action="{!getToken}"/>
+     </apex:form>
+     {!bodyprint}
+</apex:page>
